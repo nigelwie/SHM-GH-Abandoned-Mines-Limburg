@@ -1,0 +1,13 @@
+This directory contains historic heights of NAP benchmarks. Specifically:
+
+- levelling_NAP_ZL_20220616_redef.csv - .csv file containing historic NAP heights of benchmarks
+
+- load_levelling_csv_file.ipynb - example notebook for reading the .csv data file
+
+NOTE: some hgt (NAP benchmark heights in meters) values are NaN (Not-a-Number). 
+This is e.g. because the NAP re-definition grid was not covering the 
+points, or heights are mentioned multiple time in the .xlsx file, and 
+only one is used.)
+
+Freek van Leijen
+
