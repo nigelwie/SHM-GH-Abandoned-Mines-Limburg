@@ -1,0 +1,12 @@
+In this directory you find two .csv files with InSAR displacement time 
+series, corresponding to two datasets on the bodemdalingskaart.nl website:
+
+- sentinel1_asc_t088_limburg.csv (corresponding to the Midden-2 layer on bodemdalingskaart.nl, not visible)
+- sentinel1_dsc_t037_limburg.csv (corresponding to the Midden-1 layer on bodemdalingskaart.nl)
+
+The data is provided in the radar line-of-sight (LOS) direction.
+
+You can use the Python notebook (.ipynb file) as example to read the data.
+ 
+Freek van Leijen
+

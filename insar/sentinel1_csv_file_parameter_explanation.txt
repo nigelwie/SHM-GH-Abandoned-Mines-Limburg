@@ -1,0 +1,27 @@
+
+
+pnt_id                - Unique point ID
+pnt_flags             - Scatterer type flag
+pnt_lat               - Latitude [degrees] (WGS84)
+pnt_lon               - Longitude [degrees] (WGS84)
+pnt_line              - Radar image pixel number in azimuth direction (along orbit)
+pnt_pixel             - Radar image pixel numer in range direction (across orbit)
+pnt_height            - Height of scatterer [m] (WGS84)
+pnt_demheight         - Height of DEM [m] (WGS84), approximately local terrain height
+pnt_demheight_highres - Height of high-resolution DEM (if available) [m] (WGS84), approximately local terrain height
+pnt_geoid             - Height of geoid [m] (WGS84)
+pnt_incidangle        - Local incidence angle [degrees]
+pnt_enscoh            - Local ensemble coherence [0-1]
+pnt_ampconsist        - Amplitude consistency [0- ]
+pnt_quality           - Ensemble coherence with respect to the reference point
+pnt_linear            - Displacement model, linear part [m/y]
+pnt_quadratic         - Displacement model, quadratic part [m2/y2]
+pnt_seasonal_cos      - Displacement model, cosine part seasonal model [m]
+pnt_seasonal_sin      - Displacement model, sine part seasonal model [m]
+pnt_ds_nr_neighbors   - Number of averaged pixels for Distributed Scatterers (DS)
+d_20171004            - Displacement time series [m]
+...
+
+Freek van Leijen
+22 December 2023
+
