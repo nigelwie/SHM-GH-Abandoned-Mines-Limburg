@@ -1,0 +1,24 @@
+This folder contains GNSS data for the Abandoned mines Limburg case study.
+
+Contents:
+
+- gnss_data.csv - GNSS time series for various stations
+- GPS_CORS_ZL.png - plot of locations of (most) of the stations in the data file
+- tseriesplots.zip - plots based on the GNSS data file
+- tseriessummaryplot.zip - summary plots of the GNSS data file
+- tseriessummary.txt - summary of estimates based on the GNSS data
+
+- load_gnss_csv_file.ipynb - example notebook for reading the .csv data file
+
+
+See Section 3.2 of the report
+
+Na-ijlende gevolgen steenkolenwinning Zuid-Limburg, WG 5.2.1 - ground movements, 2016.
+
+(to be downloaded from https://www.tweedekamer.nl/kamerstukken/detail?id=2016D49345&did=2016D49345)
+
+for details on the data processing, meaning of the various parameters, etc.
+
+
+Freek van Leijen
+
