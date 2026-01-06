@@ -5,27 +5,16 @@
 **Description**  
 Historic height time series of NAP benchmarks from classical precise leveling campaigns.
 
-**Temporal Resolution**  
-- Irregular (campaign-based; not daily)
-
-**Spatial Resolution**  
-- Point-based benchmark locations
-
-**Observed Variable**  
-- Height relative to NAP (`hgt`, meters)
+**Temporal and Spatial Resolution**  
+- Irregular point-based
 
 **Accuracy / Variance**  
-- High accuracy typical of precise leveling  
-- Variance not provided; assumed point- and time-dependent
+- Variance: 
 
 **Reference Frame**  
 - Vertical: NAP (meters)  
 - Horizontal: RD coordinates (meters)  
 - Latitude/longitude available (degrees)
-
-**Noise Characteristics**  
-- Low-noise measurements with possible correlated errors  
-- Potential step changes due to NAP redefinitions and benchmark instability
 
 **Data Notes**  
 - Some height values are NaN due to missing redefinition coverage or duplicate entries
@@ -41,37 +30,27 @@ InSAR displacement time series derived from Sentinel-1 SAR data for Limburg, pro
 - `sentinel1_asc_t088_limburg.csv` — Ascending orbit (Midden-2 layer)  
 - `sentinel1_dsc_t037_limburg.csv` — Descending orbit (Midden-1 layer)
 
-**Temporal Resolution**  
-- Irregular, satellite revisit–based (multi-day intervals)
-
-**Spatial Resolution**  
-- Point-based persistent and distributed scatterers
+**Temporal and Spatial Resolution**  
+- Irregular point-based, satellite revisit–based 12-day interval 
 
 **Observed Variable**  
 - LOS displacement time series (`d_YYYYMMDD`, meters)
+- Find correct offset:
+  - pnt_height            - Height of scatterer [m] (WGS84)
+  - pnt_demheight         - Height of DEM [m] (WGS84), approximately local terrain height
+  - pnt_demheight_highres - Height of high-resolution DEM (if available) [m] (WGS84), approximately local terrain height
+  - pnt_geoid             - Height of geoid [m] (WGS84)
 
 **Accuracy / Variance**  
-- Quality depends on:
-  - Ensemble coherence (`pnt_enscoh`)
-  - Amplitude consistency (`pnt_ampconsist`)
-  - Number of averaged pixels (`pnt_ds_nr_neighbors`)
-- Variance not explicitly provided
+- Variance: $\sigma$ 1.2 mm
 
 **Reference Frame**  
 - Coordinate system: WGS84 (latitude/longitude in degrees)  
 - Heights: Ellipsoidal heights and DEM-based terrain heights (meters)
 
-**Noise Characteristics**  
-- Mixed noise sources including:
-  - Atmospheric phase delay
-  - Temporal decorrelation
-  - Orbit and DEM errors
-- Noise level varies per point and can be assessed using coherence metrics
-
 **Data Notes**  
 - Displacements are given in **radar LOS direction**  
 - Linear, quadratic, and seasonal displacement model parameters are included per point
-
 
 ---
 
@@ -80,11 +59,8 @@ InSAR displacement time series derived from Sentinel-1 SAR data for Limburg, pro
 **Description**  
 GNSS displacement time series for multiple stations in the Abandoned Mines Limburg case study.
 
-**Temporal Resolution**  
-- Regular, typically daily observations
-
-**Spatial Resolution**  
-- Point-based GNSS station locations
+**Temporal and Spatial Resolution**  
+- Irregular point-based, typically daily observations
 
 **Observed Variables**  
 - North, East, Up coordinates (`n`, `e`, `u`, mm)
@@ -92,6 +68,8 @@ GNSS displacement time series for multiple stations in the Abandoned Mines Limbu
 **Accuracy / Variance**  
 - Station-specific precision provided as standard deviations:
   - `sn`, `se`, `su` (mm)
+  - standard deviation horizontal coordinates $\sigma \approx$ 1-2mm
+  - standard deviation vertical coordinate $\sigma \approx$ 2-4mm
 - Accuracy varies per station and time period
 
 **Reference Frame**  
@@ -99,12 +77,6 @@ GNSS displacement time series for multiple stations in the Abandoned Mines Limbu
   - WGS84 latitude/longitude (degrees)
   - RD coordinates (meters)
 - Displacements expressed in local topocentric frame (N, E, U)
-
-**Noise Characteristics**  
-- Combination of:
-  - White noise (measurement noise)
-  - Temporally correlated noise (e.g. multipath, monument motion)
-- Noise properties may be inferred from time series residuals
 
 **Data Notes**  
 - Station locations visualized in `GPS_CORS_ZL.png`  
