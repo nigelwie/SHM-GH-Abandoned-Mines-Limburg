@@ -201,6 +201,9 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
+# Remote sensing / Sentinel-1 data
+sentinel1_*.csv
+
 # Marimo
 marimo/_static/
 marimo/_lsp/
