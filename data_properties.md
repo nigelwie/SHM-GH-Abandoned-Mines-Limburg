@@ -15,6 +15,7 @@ Historic height time series of NAP benchmarks from classical precise leveling ca
 - Vertical: NAP (meters)  
 - Horizontal: RD coordinates (meters)  
 - Latitude/longitude available (degrees)
+- NAP reference
 
 **Data Notes**  
 - Some height values are NaN due to missing redefinition coverage or duplicate entries
@@ -47,6 +48,8 @@ InSAR displacement time series derived from Sentinel-1 SAR data for Limburg, pro
 **Reference Frame**  
 - Coordinate system: WGS84 (latitude/longitude in degrees)  
 - Heights: Ellipsoidal heights and DEM-based terrain heights (meters)
+- Unknown reference what is the zero point?
+
 
 **Data Notes**  
 - Displacements are given in **radar LOS direction**  
@@ -77,6 +80,7 @@ GNSS displacement time series for multiple stations in the Abandoned Mines Limbu
   - WGS84 latitude/longitude (degrees)
   - RD coordinates (meters)
 - Displacements expressed in local topocentric frame (N, E, U)
+- Ellipsoid European plate
 
 **Data Notes**  
 - Station locations visualized in `GPS_CORS_ZL.png`  
